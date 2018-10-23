@@ -1,0 +1,5 @@
+
+AuthName "Şifre Koruması"
+AuthType Basic
+AuthUserFile C:\wamp64\www\...com\adminpanel\.htpasswd
+require valid-user
