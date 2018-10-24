@@ -52,22 +52,22 @@ function getir($key, $varsayilan)
         
         try{
             if($stmt->rowCount()>0 && password_verify($sifre, $result['admin_sifre'])){
-              if($stmt->rowCount()>0){
               $_SESSION['name']= $ad;
               $_SESSION['logged'] = time();
               header('Location: index.php');
-           // exit();
+              exit();
              }
             else{
               $msg="Yanlış kullanıcı ad ve şifre";?>
               
               <div class="alert alert-danger"><?php echo $msg;?>
          
-			</div><?php
-              header('Location:login.php?msg=$msg');
+            </div>
+            <?php
+              header("Location:login.php?msg=$msg");
             }
           }
-        }
+        
         catch(PDOException $e){ 
             return false;
            }
