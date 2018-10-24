@@ -43,9 +43,8 @@ function getir($key, $varsayilan)
       if(isset($_POST['btngiris']) && isset($_POST['ad']) && !empty($_POST['ad']) && isset($_POST['sifre']) && !empty($_POST['sifre']))
     {
         $ad = getir("ad","-");
-        $ad = getir($ad);
         $sifre = getir("sifre","-");
-        $sifre = getir($sifre);
+       
 
         $stmt=$DB_con->prepare('SELECT * FROM admintbl WHERE admin_ad =?');
         $stmt->execute([$ad]);
