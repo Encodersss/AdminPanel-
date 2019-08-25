@@ -78,7 +78,7 @@ function getir($key, $varsayilan)
           session_unset();
           $msg = "Başarıyla Çıkış Yaptınız.";
           header("Location: login.php?msg=$msg",TRUE,302); 
-          header("Cache-Control", "no-cache, no-store, must-revalidate");
+          header("Cache-Control: no-cache, no-store, must-revalidate, Pragma:no-cache, Expires:0");
           header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
           
           die();
